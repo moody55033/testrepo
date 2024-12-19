@@ -1,0 +1,7 @@
+library(ggplot2)
+library(datasets)
+data(mtcars)
+head(mtcars, 5)
+ggplot(aes(x=disp, y=mpg),data=mtcars)+ geom_points() + ggtitle("displacement versus miles per gallon") + labs(x= "Displacement", y="Miles per Gallon")
+mtcars$vs <- as.factor(mtcars$vs)
+ggplot(aes(x=vs, y=mpg),data)
